@@ -62,5 +62,8 @@
     "tw-animate-css": "^1.2.5",
     "vaul": "^1.1.2",
     "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "daisyui": "^5.0.18"
   }
 }
