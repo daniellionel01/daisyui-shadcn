@@ -4,7 +4,6 @@ import { CardsChat } from "./01-shadcn/chat";
 import { CardsCookieSettings } from "./01-shadcn/cookie-settings";
 import { CardsCreateAccount } from "./01-shadcn/create-account";
 import { CardsDataTable } from "./01-shadcn/data-table";
-import { CardsMetric } from "./01-shadcn/metric";
 import { CardsPaymentMethod } from "./01-shadcn/payment-method";
 import { CardsReportIssue } from "./01-shadcn/report-issue";
 import { CardsShare } from "./01-shadcn/share";
@@ -20,9 +19,6 @@ export function ComparisonShadcn01() {
           <CardsCalendar />
           <div className="pt-3 sm:pl-2 sm:pt-0 xl:pl-4">
             <CardsActivityGoal />
-          </div>
-          <div className="pt-3 sm:col-span-2 xl:pt-4">
-            <CardsMetric />
           </div>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
@@ -45,9 +41,6 @@ export function ComparisonShadcn01() {
           <CardsCalendar />
           <div className="pt-3 sm:pl-2 sm:pt-0 xl:pl-3">
             <CardsActivityGoal />
-          </div>
-          <div className="pt-3 sm:col-span-2 xl:pt-3">
-            <CardsMetric />
           </div>
         </div>
         <div className="hidden md:block">
