@@ -1,8 +1,9 @@
 import { Terminal } from "lucide-react";
+import { BreadcrumbEllipsis } from "./ui/breadcrumb";
 
 export function ComponentsCollectionDaisy() {
   return (
-    <div className="space-y-4 ">
+    <div className="space-y-8">
       <div className="text-xl font-bold">
         <div>DaisyUI</div>
       </div>
@@ -27,6 +28,23 @@ export function ComponentsCollectionDaisy() {
         <div className="badge badge-sm badge-neutral">Badge</div>
         <div className="badge badge-sm badge-neutral badge-outline">Badge</div>
         <div className="badge badge-sm badge-ghost">Badge</div>
+      </div>
+
+      <div className="w-full">
+        <div className="breadcrumbs text-sm">
+          <ul>
+            <li>
+              <a>Home</a>
+            </li>
+            <li>
+              <BreadcrumbEllipsis className="h-4 w-4" />
+            </li>
+            <li>
+              <a>Components</a>
+            </li>
+            <li>Breadcrumb</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
