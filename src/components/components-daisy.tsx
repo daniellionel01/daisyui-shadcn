@@ -83,6 +83,15 @@ export function ComponentsCollectionDaisy() {
           </label>
         </div>
       </fieldset>
+
+      <div>
+        <select defaultValue="Pick a color" className="select w-[180px]">
+          <option disabled={true}>Select a fruit</option>
+          <option>Apple</option>
+          <option>Banana</option>
+          <option>Blueberry</option>
+        </select>
+      </div>
     </div>
   );
 }
