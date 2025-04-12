@@ -92,6 +92,18 @@ export function ComponentsCollectionDaisy() {
           <option>Blueberry</option>
         </select>
       </div>
+
+      <div className="w-full">
+        <div className="flex items-center space-x-2">
+          <input type="checkbox" defaultChecked className="toggle toggle-sm" />
+          <label
+            htmlFor="terms"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Airplane Mode
+          </label>
+        </div>
+      </div>
     </div>
   );
 }

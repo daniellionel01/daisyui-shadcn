@@ -25,6 +25,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Switch } from "./ui/switch";
 
 export function ComponentsCollectionShadcn() {
   return (
@@ -132,6 +133,13 @@ export function ComponentsCollectionShadcn() {
             </SelectGroup>
           </SelectContent>
         </Select>
+      </div>
+
+      <div className="w-full">
+        <div className="flex items-center space-x-2">
+          <Switch id="airplane-mode" />
+          <Label htmlFor="airplane-mode">Airplane Mode</Label>
+        </div>
       </div>
     </div>
   );
