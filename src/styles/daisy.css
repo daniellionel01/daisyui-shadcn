@@ -47,6 +47,13 @@
     .btn-outline {
       @apply border-base-300 shadow-xs;
     }
+
+    .badge {
+      @apply font-medium;
+    }
+    .badge-outline {
+      @apply border-base-300;
+    }
   }
 }
 
