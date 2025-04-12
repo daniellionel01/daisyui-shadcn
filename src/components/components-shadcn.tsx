@@ -26,6 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Switch } from "./ui/switch";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
 
 export function ComponentsCollectionShadcn() {
   return (
@@ -140,6 +141,22 @@ export function ComponentsCollectionShadcn() {
           <Switch id="airplane-mode" />
           <Label htmlFor="airplane-mode">Airplane Mode</Label>
         </div>
+      </div>
+
+      <div className="w-full">
+        <Card className="w-[350px]">
+          <CardHeader>
+            <CardTitle>Create project</CardTitle>
+            <CardDescription>Deploy your new project in one-click.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm font-medium leading-none">Push Notifications</p>
+          </CardContent>
+          <CardFooter className="flex justify-between">
+            <Button variant="outline">Cancel</Button>
+            <Button>Deploy</Button>
+          </CardFooter>
+        </Card>
       </div>
     </div>
   );

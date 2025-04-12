@@ -90,5 +90,9 @@
     .select {
       @apply shadow-xs border-base-300 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-[color,box-shadow];
     }
+
+    .card {
+      @apply border border-base-300;
+    }
   }
 }

@@ -104,6 +104,22 @@ export function ComponentsCollectionDaisy() {
           </label>
         </div>
       </div>
+
+      <div className="card bg-base-100 shadow-sm w-[350px]">
+        <div className="card-body">
+          <div className="space-y-1">
+            <h2 className="card-title">Create project</h2>
+            <p className="text-sm text-base-content/70">Deploy your new project in one-click.</p>
+          </div>
+          <div className="py-4">
+            <p className="text-sm font-medium leading-none">Push Notifications</p>
+          </div>
+          <div className="card-actions justify-between">
+            <button className="btn btn-outline">Cancel</button>
+            <button className="btn btn-neutral">Deploy</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
