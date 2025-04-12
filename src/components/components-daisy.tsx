@@ -3,7 +3,7 @@ import { BreadcrumbEllipsis } from "./ui/breadcrumb";
 
 export function ComponentsCollectionDaisy() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-[500px]">
       <div className="text-xl font-bold">
         <div>DaisyUI</div>
       </div>

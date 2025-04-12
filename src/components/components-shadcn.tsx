@@ -30,7 +30,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 export function ComponentsCollectionShadcn() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-[500px]">
       <div className="text-xl font-bold">
         <div>Shadcn/ui</div>
       </div>
