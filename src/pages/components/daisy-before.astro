@@ -4,10 +4,8 @@ import Layout from "@/layouts/Layout.astro";
 import DaisyStyled from "@/layouts/DaisyStyled.astro";
 ---
 
-<Layout>
+<Layout theme="light">
   <DaisyStyled>
-    <div class="px-10">
-      <ComponentsCollectionDaisy client:only="react" />
-    </div>
+    <ComponentsCollectionDaisy client:only="react" />
   </DaisyStyled>
 </Layout>

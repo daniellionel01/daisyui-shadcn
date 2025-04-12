@@ -4,10 +4,8 @@ import Layout from "@/layouts/Layout.astro";
 import ShadcnStyled from "@/layouts/ShadcnStyled.astro";
 ---
 
-<Layout>
+<Layout theme="light">
   <ShadcnStyled>
-    <div class="px-10">
-      <ComponentsCollectionShadcn client:only="react" />
-    </div>
+    <ComponentsCollectionShadcn client:only="react" />
   </ShadcnStyled>
 </Layout>

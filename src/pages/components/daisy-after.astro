@@ -1,0 +1,11 @@
+---
+import { ComponentsCollectionDaisy } from "@/components/components-daisy";
+import Layout from "@/layouts/Layout.astro";
+import DaisyStyled from "@/layouts/DaisyStyled.astro";
+---
+
+<Layout theme="shadcn">
+  <DaisyStyled>
+    <ComponentsCollectionDaisy client:only="react" />
+  </DaisyStyled>
+</Layout>
