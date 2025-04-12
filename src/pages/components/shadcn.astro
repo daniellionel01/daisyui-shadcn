@@ -1,0 +1,13 @@
+---
+import { ComponentsCollectionShadcn } from "@/components/components-shadcn";
+import Layout from "@/layouts/Layout.astro";
+import ShadcnStyled from "@/layouts/ShadcnStyled.astro";
+---
+
+<Layout>
+  <ShadcnStyled>
+    <div class="px-10">
+      <ComponentsCollectionShadcn client:only="react" />
+    </div>
+  </ShadcnStyled>
+</Layout>

@@ -1,0 +1,13 @@
+---
+import { ComponentsCollectionDaisy } from "@/components/components-daisy";
+import Layout from "@/layouts/Layout.astro";
+import DaisyStyled from "@/layouts/DaisyStyled.astro";
+---
+
+<Layout>
+  <DaisyStyled>
+    <div class="px-10">
+      <ComponentsCollectionDaisy client:only="react" />
+    </div>
+  </DaisyStyled>
+</Layout>

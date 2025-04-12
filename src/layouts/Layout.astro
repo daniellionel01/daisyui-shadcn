@@ -1,17 +1,80 @@
 ---
-import "@/styles/global.css";
+const themes = ["light", "shadcn"];
+const defaultTheme = "shadcn";
 ---
 
 <!doctype html>
-<html lang="en" data-theme="shadcn">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>DaisyUI / Shadcn Theme</title>
+
+    <script is:inline src="//unpkg.com/alpinejs" defer></script>
+
+    <script is:inline define:vars={{ themes, defaultTheme }}>
+      const storedTheme = localStorage.getItem("theme");
+      const initialTheme = themes.includes(storedTheme) ? storedTheme : defaultTheme;
+      document.documentElement.setAttribute("data-theme", initialTheme);
+    </script>
+
+    <style>
+      .theme-toggle-button {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        color: #333;
+        cursor: pointer;
+        font-size: 1rem;
+        transition:
+          background-color 0.2s ease,
+          border-color 0.2s ease;
+        text-align: center;
+        display: inline-block;
+      }
+      .theme-toggle-button:hover {
+        background-color: #eee;
+        border-color: #bbb;
+      }
+      .theme-toggle-button:active {
+        background-color: #ddd;
+      }
+    </style>
   </head>
-  <body>
+  <body
+    x-data="{
+      theme: 'light',
+      themes: ['light', 'shadcn'],
+      init() {
+        this.theme = document.documentElement.getAttribute('data-theme') || this.themes[1];
+
+        this.$watch('theme', (newTheme) => {
+          localStorage.setItem('theme', newTheme);
+          document.documentElement.setAttribute('data-theme', newTheme);
+          console.log(`Theme changed to: ${newTheme}`);
+        });
+      }
+    }"
+    x-init="init()"
+  >
+    <div class="p-4 flex w-full justify-between">
+      <button
+        @click="theme = (theme === themes[0] ? themes[1] : themes[0])"
+        x-text="`current daisy theme: ${theme}`"
+        class="theme-toggle-button"
+      >
+        <!-- handled by x-test -->
+      </button>
+      <div class="flex gap-2 items-center">
+        <a class="hover:underline" href="/components/shadcn">Components Shadcn</a>
+        <span>|</span>
+        <a class="hover:underline" href="/components/daisy">Components Daisy</a>
+      </div>
+    </div>
+    <hr class="my-4" />
     <slot />
   </body>
 </html>
