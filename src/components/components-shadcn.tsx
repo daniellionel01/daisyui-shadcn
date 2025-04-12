@@ -12,6 +12,8 @@ import {
   BreadcrumbSeparator,
 } from "./ui/breadcrumb";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
+import { Checkbox } from "./ui/checkbox";
+import { Input } from "./ui/input";
 
 export function ComponentsCollectionShadcn() {
   return (
@@ -70,6 +72,22 @@ export function ComponentsCollectionShadcn() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
+      </div>
+
+      <div className="w-full">
+        <div className="flex items-center space-x-2">
+          <Checkbox id="terms" />
+          <label
+            htmlFor="terms"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Accept terms and conditions
+          </label>
+        </div>
+      </div>
+
+      <div className="w-full">
+        <Input type="email" placeholder="Email" className="w-full max-w-xs" />
       </div>
     </div>
   );

@@ -1,6 +1,20 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme {
+  --color-ring: oklch(0.708 0 0);
+}
+
+@layer utilities {
+  .container-wrapper {
+    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl min-[1400px]:border-x mx-auto w-full border-dashed;
+  }
+
+  .container {
+    @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
+  }
+}
+
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
@@ -54,15 +68,16 @@
     .badge-outline {
       @apply border-base-300;
     }
-  }
-}
 
-@layer utilities {
-  .container-wrapper {
-    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl min-[1400px]:border-x mx-auto w-full border-dashed;
-  }
+    .checkbox {
+      @apply shadow-sm border-base-300;
+    }
+    .checkbox-sm {
+      @apply w-4 h-4;
+    }
 
-  .container {
-    @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
+    .input {
+      @apply shadow-xs border-base-300 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-[color,box-shadow];
+    }
   }
 }

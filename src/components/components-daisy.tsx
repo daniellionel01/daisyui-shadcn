@@ -46,6 +46,22 @@ export function ComponentsCollectionDaisy() {
           </ul>
         </div>
       </div>
+
+      <div className="w-full">
+        <div className="flex items-center space-x-2">
+          <input type="checkbox" defaultChecked className="checkbox checkbox-sm" />
+          <label
+            htmlFor="terms"
+            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          >
+            Accept terms and conditions
+          </label>
+        </div>
+      </div>
+
+      <div className="w-full">
+        <input type="email" placeholder="Email" className="input w-full max-w-xs" />
+      </div>
     </div>
   );
 }
