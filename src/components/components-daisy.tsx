@@ -62,6 +62,27 @@ export function ComponentsCollectionDaisy() {
       <div className="w-full">
         <input type="email" placeholder="Email" className="input w-full max-w-xs" />
       </div>
+
+      <fieldset className="w-full space-y-2">
+        <div className="flex items-center space-x-2">
+          <input type="radio" name="radio-1" className="radio radio-sm" />
+          <label htmlFor="r1" className="text-sm font-medium leading-none">
+            Radio
+          </label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <input type="radio" name="radio-2" className="radio radio-sm" defaultChecked />
+          <label htmlFor="r2" className="text-sm font-medium leading-none">
+            Radio
+          </label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <input type="radio" name="radio-3" className="radio radio-sm" />
+          <label htmlFor="r3" className="text-sm font-medium leading-none">
+            Radio
+          </label>
+        </div>
+      </fieldset>
     </div>
   );
 }

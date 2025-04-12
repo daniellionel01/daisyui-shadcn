@@ -14,6 +14,8 @@ import {
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Checkbox } from "./ui/checkbox";
 import { Input } from "./ui/input";
+import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
+import { Label } from "./ui/label";
 
 export function ComponentsCollectionShadcn() {
   return (
@@ -88,6 +90,23 @@ export function ComponentsCollectionShadcn() {
 
       <div className="w-full">
         <Input type="email" placeholder="Email" className="w-full max-w-xs" />
+      </div>
+
+      <div className="w-full">
+        <RadioGroup defaultValue="comfortable">
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="default" id="r1" />
+            <Label htmlFor="r1">Radio</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="comfortable" id="r2" />
+            <Label htmlFor="r2">Radio</Label>
+          </div>
+          <div className="flex items-center space-x-2">
+            <RadioGroupItem value="compact" id="r3" />
+            <Label htmlFor="r3">Radio</Label>
+          </div>
+        </RadioGroup>
       </div>
     </div>
   );

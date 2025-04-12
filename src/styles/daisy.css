@@ -70,7 +70,7 @@
     }
 
     .checkbox {
-      @apply shadow-sm border-base-300;
+      @apply shadow-xs border-base-300;
     }
     .checkbox-sm {
       @apply w-4 h-4;
@@ -78,6 +78,13 @@
 
     .input {
       @apply shadow-xs border-base-300 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] transition-[color,box-shadow];
+    }
+
+    .radio {
+      @apply shadow-xs;
+    }
+    .radio-sm {
+      @apply w-4 h-4;
     }
   }
 }
